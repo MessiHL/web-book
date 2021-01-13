@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transform</title>
+  <style>
+    .transform-list{
+      width: 980px;
+      margin: 0 auto;
+    }
+    h2{
+      text-align: center;
+    }
+    .transform-item {
+      display: inline-block;
+      margin: 50px;
+    }
+    .transform-code{
+      text-align: left;
+      font-size: 16px;
+    }
+
+    .out-line {
+      position: relative;
+      text-align: center;
+      width: 200px;
+      height: 200px;
+      border: 2px solid red
+    }
+
+    .container {
+      text-align: center;
+      line-height: 200px;
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      color: #fff;
+      background-color:#4e6ef2;
+    }
+
+    .translate-item1{
+      transform:translate(20px);
+    }
+    .translate-item2{
+      transform:translate(40px,10px);
+    }
+    .translate-item3{
+      transform:translate(-20px,-20px);
+    }
+
+    .rotate10 {
+      transform: rotate(10deg);
+    }
+
+    .rotate70 {
+      transform: rotate(70deg);
+    }
+
+    .rotate20-m {
+      transform: rotate(-20deg);
+    }
+
+    .scale{
+      transform: scale(1.2,1.5);
+    }
+    .scaley{
+      transform: scaleY(1.2);
+    }
+    .scale-m{
+      transform: scale(0.8);
+    }
+
+    .skew1{
+      transform: skew(10deg,10deg);
+    }
+
+    .skew2{
+      transform:skewX(20deg)
+    }
+    .skew3{
+      transform: skewX(-20deg);
+
+    }
+    .skew4{
+      transform:skewY(20deg)
+    }
+    .skew5{
+      transform:skewY(-20deg)
+    }
+    .matrix0{
+      transform:matrix(0.866,0.5,-0.5,0.866,0,0)
+    }
+    .matrix1{
+      transform:matrix(0.5,0.6,-0.5,0.5,0,0)
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="transform-list">
+    <h2>
+      <a href="https://www.w3school.com.cn/css3/css3_2dtransform.asp" target="_blank">transform(translate、rotate、scale、skew、matrix)</a>
+    </h2>
+
+    <h3>translate()</h3>
+    <p>通过 translate() 方法，根据给定的 left（x 坐标） 和 top（y 坐标） 位置参数，元素从其当前位置移动。</p>
+    <div class="transform-code">
+      <pre>
+          transform: translate(50px,100px);
+          -ms-transform: translate(50px,100px); /* IE 9 */
+          -webkit-transform: translate(50px,100px); /* Safari and Chrome */
+          -o-transform: translate(50px,100px); /* Opera */
+          -moz-transform: translate(50px,100px); /* Firefox */
+      </pre>
+    </div>
+    <div class="transform-item">
+      <div class="out-line">
+        <div class="container translate-item1">translate(20px);</div>
+      </div>
+    </div>
+    <div class="transform-item">
+      <div class="out-line">
+        <div class="container translate-item2">translate(40px,10px);</div>
+      </div>
+    </div>
+    <div class="transform-item">
+      <div class="out-line">
+        <div class="container translate-item3">translate(-20px,-20px);</div>
+      </div>
+    </div>
+
+    
+    <h3>rotate()</h3>
+    <p>通过 rotate() 方法，元素顺时针旋转给定的角度。允许负值，元素将逆时针旋转。</p>
+    <div class="transform-code">
+      <pre>
+        transform: rotate(30deg);
+        -ms-transform: rotate(30deg);		/* IE 9 */
+        -webkit-transform: rotate(30deg);	/* Safari and Chrome */
+        -o-transform: rotate(30deg);		/* Opera */
+        -moz-transform: rotate(30deg);  /* Firefox */
+      </pre>
+    </div>
+    <div class="transform-item">
+      <div class="out-line">
+        <div class="container rotate10">transform rotate(10deg)</div>
+      </div>
+    </div>
+    <div class="transform-item">
+      <div class="out-line">
+        <div class="container rotate70">transform rotate(70deg)</div>
+      </div>
+    </div>
+    <div class="transform-item">
+      <div class="out-line">
+        <div class="container rotate20-m">transform rotate(-20deg)</div>
+      </div>
+    </div>
+
+
+    <h3>scale()</h3>
+    <p>通过 scale() 方法，根据给定的宽度（X 轴）和高度（Y 轴）参数，元素的尺寸会增加或减少。</p>
+    <div class="transform-code">
+      <pre>
+        transform: scale(2,4);
+        -ms-transform: scale(2,4); /* IE 9 */
+        -webkit-transform: scale(2,4); /* Safari 和 Chrome */
+        -o-transform: scale(2,4); /* Opera */
+        -moz-transform: scale(2,4); /* Firefox */
+      </pre>
+    </div>
+    <div class="transform-item">
+      <div class="out-line">
+        <div class="container scale">scale(1.2,1.5)</div>
+      </div>
+    </div>
+    <div class="transform-item">
+      <div class="out-line">
+        <div class="container scaley">scaleY(1.2)</div>
+      </div>
+    </div>
+    <div class="transform-item">
+      <div class="out-line">
+        <div class="container scale-m">scale(0.8)</div>
+      </div>
+    </div>
+
+
+    <h3>skew()</h3>
+    <p>通过 skew() 方法，根据给定的水平线（X 轴）和垂直线（Y 轴）参数,元素翻转给定的角度。</p>
+    <div class="transform-code">
+      <pre>
+        transform: skew(30deg,20deg);
+        -ms-transform: skew(30deg,20deg);	/* IE 9 */
+        -webkit-transform: skew(30deg,20deg);	/* Safari and Chrome */
+        -o-transform: skew(30deg,20deg);	/* Opera */
+        -moz-transform: skew(30deg,20deg);	/* Firefox */
+      </pre>
+    </div>
+    <div class="transform-item">
+      <div class="out-line">
+        <div class="container skew1">skew(10deg,10deg)</div>
+      </div>
+    </div>
+    <div class="transform-item">
+      <div class="out-line">
+        <div class="container skew2">skewX(20deg)</div>
+      </div>
+    </div>
+    <div class="transform-item">
+      <div class="out-line">
+        <div class="container skew3">skewX(-20deg)</div>
+      </div>
+    </div>
+    <div class="transform-item">
+      <div class="out-line">
+        <div class="container skew4">skewY(20deg)</div>
+      </div>
+    </div>
+    <div class="transform-item">
+      <div class="out-line">
+        <div class="container skew5">skewY(-20deg)</div>
+      </div>
+    </div>
+
+
+    <h3>matrix()</h3>
+    <p>matrix() 方法把所有 2D 转换方法组合在一起。</p>
+    <p>matrix() 方法需要六个参数，包含数学函数，允许您：旋转、缩放、移动以及倾斜元素。</p>
+    <p>初始写法：transform：matrix（cosθ，sinθ,-sinθ,cosθ,0,0)</p>
+    <div class="transform-code">
+      <pre>
+        transform:matrix(0.866,0.5,-0.5,0.866,0,0);
+        -ms-transform:matrix(0.866,0.5,-0.5,0.866,0,0);		/* IE 9 */
+        -moz-transform:matrix(0.866,0.5,-0.5,0.866,0,0);	/* Firefox */
+        -webkit-transform:matrix(0.866,0.5,-0.5,0.866,0,0);	/* Safari and Chrome */
+        -o-transform:matrix(0.866,0.5,-0.5,0.866,0,0);		/* Opera */
+      </pre>
+    </div>
+    <div class="transform-item">
+      <div class="out-line">
+        <div class="container matrix0">matrix</div>
+      </div>
+    </div>
+    <div class="transform-item">
+      <div class="out-line">
+        <div class="container matrix1">matrix</div>
+      </div>
+    </div>
+    
+
+
+
+
+
+
+  </div>
+</body>
+
+</html>

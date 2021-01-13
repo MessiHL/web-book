@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transitions</title>
+  <style>
+    .trans{
+      display: inline-block;
+      padding: 10px 200px;
+      transition-property: background-color,color;
+      transition-duration: 1s;
+      transition-timing-function: ease-in-out;
+      -webkit-transition-property: background-color;
+      -webkit-transition-duration: 1s;
+      -webkit-transition-timing-function: ease-in-out;
+    }
+    .trans:hover{
+      background-color:darkblue;
+      color: rgb(42, 216, 149);
+    }
+    .trans2{
+      display: inline-block;
+      padding: 10px 200px;
+      transition-property: background-color,color;
+      transition:background-clor 2s ease;
+      -moz-transition:background-color 2s ease;
+      -webkit-transition:background-color 2s ease;
+      -o-transition:background-color 2s ease;
+    }
+    .trans2:hover{
+      background-color:darkorchid;
+      color: rgb(42, 216, 149);
+    }
+  </style>
+</head>
+<body>
+  <div class="trans">
+    <p>兼容性：</p>
+    <p>transition: width 2s; </p>
+    <p>-moz-transition: width 2s; /* Firefox 4 */</p>
+    <p>-webkit-transition: width 2s; /* Safari 和 Chrome */</p>
+    <p>-o-transition: width 2s; /* Opera */</p>
+  </div>
+  <div class="trans2">
+    <p>兼容性：</p>
+    <p>transition:background-clor 2s ease; </p>
+    <p>-moz-transition:background-color 2s ease; /* Firefox 4 */</p>
+    <p>-webkit-transition:background-color 2s ease; /* Safari 和 Chrome */</p>
+    <p>-o-transition:background-color 2s ease; /* Opera */</p>
+  </div>
+</body>
+</html>

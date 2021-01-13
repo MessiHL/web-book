@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>三等分圆</title>
+  <style>
+    
+    .circle-outline{
+      position: absolute;
+      margin: auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 400px;
+      width: 400px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .circle-inner{
+      position: absolute;
+      background-color: #fff;
+      z-index: 10;
+      top:50px;
+      left: 50px;
+      height: 300px;
+      width: 300px;
+      border-radius: 50%;
+    }
+
+    .circle-outline > .part{
+      z-index: 1;
+      position: absolute;
+      width: 76%; /* 依据skewX的值、 circle-outline的大小 动态调整 */
+      height: 76%;
+      left: 50%;
+      top: 50%;
+      transform-origin: 0% 0%; /* 设置旋转元素的基点位置 */ 
+    }
+
+    .circle-outline > .blue{
+      background-color: blue;
+    }
+    .circle-outline > .red{
+      background-color: red;
+    }
+    .circle-outline > .green{
+      background-color: green;
+    }
+
+    .circle-outline > .pos01{
+      transform: rotate(-30deg) skewX(-30deg);
+    }
+    .circle-outline > .pos02{
+      transform: rotate(90deg) skewX(-30deg);
+    }
+    .circle-outline > .pos03{
+      transform: rotate(210deg) skewX(-30deg);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="circle-outline">
+    <div class="circle-inner"></div>
+    <div class="part blue pos01"></div>
+    <div class="part red pos02"></div>
+    <div class="part green pos03"></div>
+  </div>
+</body>
+</html>
