@@ -1,3 +1,8 @@
+let isDone:boolean = false;
+let title: string = 'tom';
+
+let list:number[]
+
 // tuple
 let x:[string,number];
 x = ['kobe',41];
