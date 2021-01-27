@@ -193,6 +193,26 @@ module.exports = {
     'object-curly-spacing': [2, 'always', {
       objectsInObjects: false
     }],
-    'array-bracket-spacing': [2, 'never']
+    'array-bracket-spacing': [2, 'never'],
+    "no-useless-constructor": "off",
+    "@typescript-eslint/indent": ["error", 4, { "VariableDeclarator": 4, "SwitchCase": 1 }],
+    "@typescript-eslint/no-unused-vars": ["error", {
+        "vars": "all",
+        "args": "none",
+        "ignoreRestSiblings": true
+      }],
+    "@typescript-eslint/explicit-member-accessibility": ["error", {"accessibility": "no-public"}],
+    "@typescript-eslint/explicit-function-return-type": ["off",
+      {
+        "allowExpressions": true,
+        "allowTypedFunctionExpressions": true
+      }],
+    "@typescript-eslint/interface-name-prefix": 0,
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/no-parameter-properties": 0,
+    "@typescript-eslint/camelcase": ["off", {"properties": "always"}],
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "eqeqeq": ["warn", "always"]
   }
 }
