@@ -9,3 +9,9 @@
  let len: number = (<string>str).length;
  console.log(len);
  
+
+ // 方法二: as
+  let val: any = "hello";
+  let valLen: number = (val as string).length;
+  console.log(valLen);
+  
